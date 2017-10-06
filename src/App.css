@@ -1,0 +1,30 @@
+html, body {
+ margin: 0;
+ padding: 0;
+ height: 100%;
+ width: 100%;
+}
+#root, .App, .d3-chart{
+  height: 100%;
+  width: 100%;
+}
+.App {
+  text-align: center;
+}
+.d3-chart {
+  background: #fff;
+}
+.bar {
+  fill: coral;
+}
+.bar:hover {
+  fill: brown;
+}
+.axis--x path {
+  display: none;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
