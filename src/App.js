@@ -40,6 +40,40 @@ class SVGChart extends React.Component {
            {letter: "Z", frequency: .00074},
          ]
       }
+      this.newData = this.newData.bind(this)
+  }
+
+  newData () {
+      this.setState({
+        data: [
+           {letter: "hi", frequency: .08167},
+           {letter: "hiB", frequency: .01492},
+           {letter: "hiC", frequency: .02780},
+           {letter: "hiD", frequency: .04253},
+           {letter: "hiE", frequency: .12702},
+           {letter: "hiF", frequency: .02288},
+           {letter: "hiG", frequency: .02022},
+           {letter: "hiH", frequency: .06094},
+           {letter: "hiI", frequency: .06973},
+           {letter: "hiJ", frequency: .00153},
+           {letter: "hiK", frequency: .00747},
+           {letter: "hiL", frequency: .04025},
+           {letter: "hiM", frequency: .02517},
+           {letter: "hiN", frequency: .06749},
+           {letter: "hiO", frequency: .07507},
+           {letter: "P", frequency: .01929},
+           {letter: "Q", frequency: .00098},
+           {letter: "R", frequency: .05987},
+           {letter: "S", frequency: .06333},
+           {letter: "T", frequency: .09056},
+           {letter: "U", frequency: .02758},
+           {letter: "V", frequency: .01037},
+           {letter: "W", frequency: .02465},
+           {letter: "X", frequency: .00150},
+           {letter: "Y", frequency: .01971},
+           {letter: "Z", frequency: .00074},
+         ]
+      })
   }
 
   render() {
@@ -101,7 +135,14 @@ class SVGChart extends React.Component {
       .attr("height", (d) => {return height - y(d.frequency)});
 
     //DOM manipulations done, convert to React
-    return div.toReact()
+    return (
+      <div>
+      <button type="button" onClick={ this.newData }>
+          <span>change</span>
+      </button>
+        {div.toReact()}
+      </div>
+    )
   }
 
 }
