@@ -23,6 +23,12 @@ html, body {
 .axis--x path {
   display: none;
 }
+.d3-chart.toggled .bar {
+  fill: steelblue;
+}
+.d3-chart.toggled .bar:hover {
+  fill: seagreen;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactFauxDOM from 'react-faux-dom';
 import * as d3 from 'd3';
-import logo from './logo.svg';
 import './App.css';
 
 
@@ -36,7 +35,7 @@ class SVGChart extends React.Component {
 
     //Create the element
     const div = new ReactFauxDOM.Element('div')
-    div.setAttribute('class', 'd3-chart')
+    div.setAttribute('class', this.props.chartClass)
 
     //Pass it to d3.select and proceed as normal
     let svg = d3.select(div).append("svg")
